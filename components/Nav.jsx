@@ -37,13 +37,14 @@ const Nav = () => {
           <div className='flex gap-3 md:gap-5'>
             <Link href="/create-prompt" className="black_btn">Create Prompt</Link>
             <button type="button" onClick={signOut} className='outline_btn'>Sign Out</button>
+            <a href="/profile"> 
             <Image src={session?.user.image}
                 width={37}
                 height={37}
                 href='/profile'
                 className='rounded-full'
                 alt='profile'
-              />
+              /></a>
           </div>
         ) : (
           <>
