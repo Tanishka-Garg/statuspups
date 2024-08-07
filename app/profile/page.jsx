@@ -24,7 +24,7 @@ const MyProfile = () => {
   }, [session?.user.id]);
 
   const handleEdit = (post) => {
-    router.push(`/update-prompt?id=${post._id}`);
+    router.push(`/update-list?id=${post._id}`);
   };
 
   const handleDelete = async (post) => {
@@ -34,7 +34,7 @@ const MyProfile = () => {
 
     if (hasConfirmed) {
       try {
-        await fetch(`/api/prompt/${post._id.toString()}`, {
+        await fetch(`/api/list/${post._id.toString()}`, {
           method: "DELETE",
         });
 
@@ -49,8 +49,8 @@ const MyProfile = () => {
 
   return (
     <Profile
-    name='My'
-    desc='Your one-stop shop for managing your Prompts.'
+    
+    desc='Your response codes list.'
     data={myPosts}
     handleEdit={handleEdit}
     handleDelete={handleDelete}
@@ -58,4 +58,4 @@ const MyProfile = () => {
   )
 }
 
-export default MyProfile;
+export default MyProfile

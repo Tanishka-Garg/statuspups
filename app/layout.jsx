@@ -4,8 +4,8 @@ import Provider from '@components/Provider';
 
 
 export const metadata = {
-    title: "PromtX",
-    description: "Share and discover best AI propts",
+    title: "Status-Pups",
+    description: "Save lists of dog response codes status",
 
 };
 

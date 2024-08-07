@@ -27,7 +27,7 @@ const Nav = () => {
           height={30}
           className='object-contain'
         />
-        <p className='logo_text'>PromptX</p>
+        <p className='logo_text'>Status-Pups</p>
       </Link>
 
       
@@ -35,7 +35,8 @@ const Nav = () => {
       <div className='sm:flex hidden'>
         {session?.user ? (
           <div className='flex gap-3 md:gap-5'>
-            <Link href="/create-prompt" className="black_btn">Create Prompt</Link>
+            <Link href="/search" className="black_btn">Search</Link>
+            {/* adding search page */}
             <button type="button" onClick={signOut} className='outline_btn'>Sign Out</button>
             <a href="/profile"> 
             <Image src={session?.user.image}
@@ -84,13 +85,16 @@ const Nav = () => {
                 >
                   My Profile
                 </Link>
-                <Link
-                  href='/create-prompt'
-                  className='dropdown_link'
-                  onClick={() => setToggleDropdown(false)}
-                >
-                  Create Prompt
-                </Link>
+                
+
+                <Link 
+                href="/search"
+                 className='dropdown_link'
+                 onClick={() => setToggleDropdown(false)}
+                 >Search</Link>
+            {/* adding search page */}
+
+            
                 <button
                   type='button'
                   onClick={() => {
