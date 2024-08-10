@@ -1,6 +1,9 @@
+
 import '@styles/global.css';
 import Nav from '@components/Nav';
 import Provider from '@components/Provider';
+import MoEngageInitializer from '@components/MoEngageInitializer';
+
 
 
 export const metadata = {
@@ -9,7 +12,9 @@ export const metadata = {
 
 };
 
+
 const RootLayout = ({ children }) => {
+    
   return (
     <html>
         <body>
@@ -19,6 +24,7 @@ const RootLayout = ({ children }) => {
             </div>
             <main className='app'>
                 <Nav/>
+                <MoEngageInitializer/>
                 {children}
             </main>
             </Provider>
